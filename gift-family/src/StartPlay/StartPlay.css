@@ -1,0 +1,12 @@
+.div-playground {
+  background-color: red;
+  max-width: 600px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid blue;
+  border-radius: 20px;
+}
