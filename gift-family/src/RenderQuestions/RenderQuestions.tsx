@@ -37,9 +37,7 @@ function RenderQuestions() {
   }
   return (
     <div>
-      <Space>
-        {answersCorrect}/{Questions.length}
-      </Space>
+      <p className='p-count'>{answersCorrect} / {Questions.length}</p>
       <Form
         form={form}
         onFinish={e => testing(e)}
@@ -48,10 +46,17 @@ function RenderQuestions() {
           label={<h1>{question}</h1>}
           name='answer'
         >
-          <Radio.Group>
-            <Space direction='vertical'>
-              {options && options.map((item: string) => <Radio className='options' value={item}>{item}</Radio>)}
-            </Space>
+          <Radio.Group
+            buttonStyle='solid'
+            optionType='button'
+            options={
+              options && options.map((item: string) => ({
+                label: item,
+                value: item,
+                className: 'options'
+              }))
+            }
+          >
           </Radio.Group>
         </Form.Item>
         <Form.Item>
