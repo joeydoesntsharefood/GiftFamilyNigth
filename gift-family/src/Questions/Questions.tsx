@@ -60,7 +60,7 @@ const Questions: IQuestion[] = [
     gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/a6363ec55369353d89b31dcfac6ff7fe28de4723/gift-family/src/RenderQuestions/imgs/gift13.mp4?raw=true',
     video: true,
     giftText: 'Mais de um ano de merda',
-    videoMute: false
+    videoMute: true
   },
   // Okay
   {

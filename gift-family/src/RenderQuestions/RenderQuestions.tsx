@@ -4,6 +4,7 @@ import { RightOutlined } from '@ant-design/icons'
 import Questions,{ IQuestion }from '../Questions/Questions'
 import './RenderQuestions.css'
 import Video from '../Video/Video'
+import Final from '../Final/Final'
 
 function RenderQuestions() {
   const [answer, setAnswer] = useState<string>()
@@ -20,12 +21,14 @@ function RenderQuestions() {
   const [textErro, setTextErro] = useState<string>('')
   const [video, setVideo] = useState<boolean>(false)
   const [videoMute, setVideoMute] = useState<boolean>(false)
+  const [final, setFinal] = useState<number>(0)
   useEffect(() => {
     setOptions(Questions[questionPage].options)
     setQuestion(Questions[questionPage].question)
     setAnswer(Questions[questionPage].answer)
     setGiftImg(Questions[questionPage].gift)
     setGiftText(Questions[questionPage].giftText)
+    setFinal(Questions.length)
     if (Questions[questionPage].video) {
       setVideo(true)
       if (Questions[questionPage].videoMute) {
@@ -38,6 +41,8 @@ function RenderQuestions() {
     setCorrect(false)
     form.resetFields()
     setErro(false)
+    setVideo(false)
+    setVideoMute(false)
   }
   function testing (e: IQuestion) {
     if (e.answer) {
@@ -55,62 +60,66 @@ function RenderQuestions() {
   }
 
   return (
-    <div>
-      {erro && <Alert message={textErro} type="error" className='erro-alert'/>}
-      {!(giftVisible) && <p className='p-count'>{answersCorrect} / {Questions.length}</p>}
-      {!(giftVisible) && <Form
-        form={form}
-        onFinish={e => testing(e)}
-      >
-        <Form.Item
-          label={<h1 className='h1-question'>{question}</h1>}
-          name='answer'
+    <>
+      {final === answersCorrect && <div>
+        <Final render={(final === answersCorrect)}/>
+      </div>}
+      {!(final === answersCorrect) && <div>
+        {erro && <Alert message={textErro} type="error" className='erro-alert'/>}
+        {!(giftVisible) && <p className='p-count'>{answersCorrect} / {Questions.length}</p>}
+        {!(giftVisible) && <Form
+          form={form}
+          onFinish={e => testing(e)}
         >
-          <Radio.Group
-            buttonStyle='solid'
-            optionType='button'
+          <Form.Item
+            label={<h1 className='h1-question'>{question}</h1>}
+            name='answer'
           >
-            {options && options.map((item: string) =>
-              <Radio value={item} className='options'>{item}</Radio>
-            )}
-          </Radio.Group>
-        </Form.Item>
-        <Form.Item>
-          <Button
-          type="primary"
-          htmlType="submit"
-          className='button-request'
-          >
-            Confirmar Resposta
-          </Button>
-        </Form.Item>
-      </Form>}
-
-      {giftVisible && <div>
-        <p className='p-gift'>{giftText}</p>
-        {!(video) && <Image
-          src={giftImg}
-          className='img-gift'
-          preview={false}
-        />}
-        {video && <Video url={giftImg} mute={videoMute}/>}
-        <RightOutlined style={{color: '#fff', width: 30 }} onClick={() => {
+            <Radio.Group
+              buttonStyle='solid'
+              optionType='button'
+            >
+              {options && options.map((item: string) =>
+                <Radio value={item} className='options'>{item}</Radio>
+              )}
+            </Radio.Group>
+          </Form.Item>
+          <Form.Item>
+            <Button
+            type="primary"
+            htmlType="submit"
+            className='button-request'
+            >
+              Confirmar Resposta
+            </Button>
+          </Form.Item>
+        </Form>}
+        {giftVisible && <div>
+          <p className='p-gift'>{giftText}</p>
+          {!(video) && <Image
+            src={giftImg}
+            className='img-gift'
+            preview={false}
+          />}
+          {video && <Video url={giftImg} mute={videoMute}/>}
+          <RightOutlined style={{color: '#fff', width: 30 }} onClick={() => {
               resetQuestionPage()
               setGiftVisible(false)
             }}/>
+        </div>}
+        {(correct && !(giftVisible)) &&
+        <>
+          <h1 style={{color: '#fff'}}>Resposta Certa !</h1>
+          <Space direction='horizontal'>
+          <RightOutlined style={{color: '#fff', width: 30 }} onClick={() => {
+                setGiftVisible(true)
+                setErro(false)
+              }}/>
+          </Space>
+        </>
+        }
       </div>}
-      {(correct && !(giftVisible)) &&
-      <>
-        <h1 style={{color: '#fff'}}>Resposta Certa !</h1>
-        <Space direction='horizontal'>
-        <RightOutlined style={{color: '#fff', width: 30 }} onClick={() => {
-              setGiftVisible(true)
-              setErro(false)
-            }}/>
-        </Space>
-      </>
-      }
-    </div>
+    </>
   )
 }
 
