@@ -63,60 +63,62 @@ const Questions: IQuestion[] = [
     question: 'Quem já fez mais papel de trouxa ?',
     answer: 'Lorrany',
     options: ['Rafael', 'Lucase', 'Lorrany', 'Lokix', 'Skinifer'],
-    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/cad112a38d02d1b445585fa95be58ccd7dd04543/gift-family/src/RenderQuestions/imgs/gift5.mp4',
+    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/cad112a38d02d1b445585fa95be58ccd7dd04543/gift-family/src/RenderQuestions/imgs/gift5.mp4?raw=true',
     giftText: 'Sério Lorrany, você consegue superar qualquer coisa que fazemos, parabéns !',
     video: true
   },
+  // Okay
   {
     question: 'Complete a pergunta Ro?La?',
     answer: 'Ny?',
     options: ['Quero', 'Onde tem ?', 'Ny?', 'Lo para', 'Pinto'],
-    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/main/gift-family/src/RenderQuestions/imgs/gift7.jpg?raw=true',
+    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/1dbc72df0e6d24d5cefae387876623430e0dcd06/gift-family/src/RenderQuestions/imgs/gift7.jpg?raw=true',
     giftText: 'NickLink oprimindo os cariocas e fodace'
   },
+  // Okay
   {
     question: 'Qual o tatuador mais gostoso do Studio De Nunes ?',
     answer: 'Wil',
     options: ['Wil', 'GuiGui', 'Frogzin', 'Wilgner', 'O Rapaz sem camisa'],
-    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/main/gift-family/src/RenderQuestions/imgs/gift9.jpg?raw=true',
-    giftText: 'Test8'
+    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/1dbc72df0e6d24d5cefae387876623430e0dcd06/gift-family/src/RenderQuestions/imgs/gift9.jpg?raw=true',
+    giftText: '@frog.wil'
   },
   {
     question: 'Qual o Emote mais usado na live até o momento ?',
     answer: 'lul',
     options: ['lul','nixnycLove', 'yayahRojão', 'kappa', 'cazeSPFC'],
-    gift: urlGit('gift1.jpg'),
-    giftText: 'Test9'
+    gift: 'https://cdn.vox-cdn.com/thumbor/tYW7_2OBEsfJ3BKsdq_fCLYG5Vk=/0x0:722x800/1200x0/filters:focal(0x0:722x800):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/10838093/LUL.jpg',
+    giftText: 'Pq Rafa/Teteu gostam tanto disso ?'
   },
   {
     question: 'Qual o jogo proibido ?',
     answer: 'Roblox',
     options: ['Terraria', 'Roblox', 'MineCraft', 'Fortnite', 'Stop'],
-    gift: urlGit('gift1.jpg'),
-    giftText: 'Test10'
+    gift: 'https://i.pinimg.com/736x/d2/0f/b9/d20fb9dcc0cc24df7266ba9c602006ff.jpg',
+    giftText: 'Queria um pó'
   },
   // Okay
   {
     question: 'Qual a bebida favorita do Lucase ?',
     answer: 'Fanta ?',
     options: ['Leitinho ?', 'Coquinha ?', 'Meu Leitinho ?', 'Leitinho Quente ?', 'Fanta ?'],
-    gift: urlGit('gift2.jpg'),
-    giftText: 'Test11'
+    gift: 'https://img.ifunny.co/images/d44c1c0df5330cab7158b40a95271f1b90c4bb57cfed42fb3d81d3cf9c8e945e_1.jpg',
+    giftText: 'Será q diminui mais ?'
   },
   // Okay
   {
     question: 'O que o Rafa mais gostaria de ter ?',
     answer: 'Bigode',
     options: ['Bong', 'Maconha sem fim', 'Bigode', 'Yayah', 'Biel'],
-    gift: urlGit('gift4.jpg'),
+    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/cad112a38d02d1b445585fa95be58ccd7dd04543/gift-family/src/RenderQuestions/imgs/gift4.jpg?raw=true',
     giftText: 'Test12'
   },
   {
     question: 'Para comemorar a pergunta de número 13, responda corretamente',
     answer: 'Lula 2022',
     options: ['Lula 2022'],
-    gift: urlGit('gift1.jpg'),
-    giftText: 'Test13'
+    gift: 'https://static.poder360.com.br/2021/03/Ev-0UmOXMA0R7XU.jpeg',
+    giftText: 'O Pai fodace'
   },
   {
     question: 'Meu bem ?',
