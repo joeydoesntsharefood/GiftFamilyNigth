@@ -1,3 +1,4 @@
+import { Button } from 'antd'
 import { useEffect, useState } from 'react'
 function Final (props: any) {
   const [render, setRender] = useState<boolean>(false)
@@ -25,6 +26,7 @@ function Final (props: any) {
           mas hoje é um ano novo para ti e você merece todos os ser parabenizada pela pessoa que você é, obrigado por salvar os meus dias e em
           partes a minha vida, amo tu idiota.
         </p>
+        <p style={{color: '#fff'}}>Desenvolvido pelo Gostoso do Lokix && Perguntas por Lokix, Rafael e Lucase</p>
       </>}
     </>
   )
