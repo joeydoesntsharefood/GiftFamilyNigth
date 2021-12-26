@@ -4,11 +4,13 @@ export interface IQuestion {
   options: string[]
   eggOption?: string
   egg?: string
-  gift: string
+  gift: any
   giftText: string
+  video?: boolean
 }
 
 const Questions: IQuestion[] = [
+  // Okay
   {
     question: 'Qual o mod que perdeu o mod mais rapido ?',
     answer: 'Fuher',
@@ -16,30 +18,33 @@ const Questions: IQuestion[] = [
     gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/4d71ad2945ba7cdc034fb40eda2b310a3bf1259d/gift-family/src/RenderQuestions/imgs/gift1.jpg?raw=true',
     giftText: 'Acredita que o Fuher gosta tanto de ti que ele sumiu durante uma semana inteira, quando voltou fez a maior propaganda sua ?'
   },
+  // Okay
   {
     question: 'O que é mais velho ?',
     answer: 'Lokix',
     options: ['Texeira', 'O seu papel de trouxa', 'Lokix', 'A gloriosa', 'Luiza?'],
     eggOption: 'A gloriosa',
     egg: 'cabeça da minha rola',
-    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/4d71ad2945ba7cdc034fb40eda2b310a3bf1259d/gift-family/src/RenderQuestions/imgs/gift1.jpg?raw=true',
+    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/cad112a38d02d1b445585fa95be58ccd7dd04543/gift-family/src/RenderQuestions/imgs/gift3.jpg',
     giftText: 'PAU NO SEU CU'
   },
+  // Okay
   {
     question: 'Qual o gaucho mais bonito da live ?',
-    answer: 'Leozin',
+    answer: 'Lucas',
     options: ['Leozin', 'Diniz', 'Teteu', 'Lucas', 'Lokix'],
     egg: 'Não sou gaucho, mas obrigado pelo elogio',
     eggOption: 'Lokix',
-    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/4d71ad2945ba7cdc034fb40eda2b310a3bf1259d/gift-family/src/RenderQuestions/imgs/gift1.jpg?raw=true',
-    giftText: 'Tes3t'
+    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/main/gift-family/src/RenderQuestions/imgs/gift6.jpg',
+    giftText: 'Acredita que ele tem uma amiga gata e não me apresentou ?'
   },
+  // Okay
   {
     question: 'Como sua mãe chama o mozão novo dela ?',
     answer: 'Leonardo',
     options: ['Leozin', 'Texeira', 'Leo', 'Leonardo', 'Sério aceita'],
-    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/4d71ad2945ba7cdc034fb40eda2b310a3bf1259d/gift-family/src/RenderQuestions/imgs/gift1.jpg?raw=true',
-    giftText: 'Test4'
+    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/main/gift-family/src/RenderQuestions/imgs/gift5.jpg',
+    giftText: 'Hmmmmmmmmmmm LEOZINNNNNNNNN'
   },
   {
     question: 'Qual o aniversário da live ?',
@@ -48,14 +53,18 @@ const Questions: IQuestion[] = [
     egg: 'Você sabe que é verdade',
     eggOption: '1 ano após a minha chegada',
     gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/4d71ad2945ba7cdc034fb40eda2b310a3bf1259d/gift-family/src/RenderQuestions/imgs/gift1.jpg?raw=true',
-    giftText: 'Test5'
+    giftText: 'Test5',
   },
+  // Okay
   {
     question: 'Quem já fez mais papel de trouxa ?',
     answer: 'Lorrany',
     options: ['Rafael', 'Lucase', 'Lorrany', 'Lokix', 'Skinifer'],
-    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/4d71ad2945ba7cdc034fb40eda2b310a3bf1259d/gift-family/src/RenderQuestions/imgs/gift1.jpg?raw=true',
-    giftText: 'Test6'
+    gift: <video style={{ width: '100%' }} controls>
+      <source src="https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/cad112a38d02d1b445585fa95be58ccd7dd04543/gift-family/src/RenderQuestions/imgs/gift5.mp4" />
+    </video>,
+    giftText: 'Sério Lorrany, você consegue superar qualquer coisa que fazemos, parabéns !',
+    video: true
   },
   {
     question: 'Complete a pergunta Ro?La?',
@@ -85,18 +94,20 @@ const Questions: IQuestion[] = [
     gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/4d71ad2945ba7cdc034fb40eda2b310a3bf1259d/gift-family/src/RenderQuestions/imgs/gift1.jpg?raw=true',
     giftText: 'Test10'
   },
+  // Okay
   {
     question: 'Qual a bebida favorita do Lucase ?',
     answer: 'Fanta ?',
     options: ['Leitinho ?', 'Coquinha ?', 'Meu Leitinho ?', 'Leitinho Quente ?', 'Fanta ?'],
-    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/4d71ad2945ba7cdc034fb40eda2b310a3bf1259d/gift-family/src/RenderQuestions/imgs/gift1.jpg?raw=true',
+    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/cad112a38d02d1b445585fa95be58ccd7dd04543/gift-family/src/RenderQuestions/imgs/gift2.jpg',
     giftText: 'Test11'
   },
+  // Okay
   {
     question: 'O que o Rafa mais gostaria de ter ?',
     answer: 'Bigode',
     options: ['Bong', 'Maconha sem fim', 'Bigode', 'Yayah', 'Biel'],
-    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/4d71ad2945ba7cdc034fb40eda2b310a3bf1259d/gift-family/src/RenderQuestions/imgs/gift1.jpg?raw=true',
+    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/cad112a38d02d1b445585fa95be58ccd7dd04543/gift-family/src/RenderQuestions/imgs/gift4.jpg',
     giftText: 'Test12'
   },
   {

@@ -17,12 +17,16 @@ function RenderQuestions() {
   const [giftVisible, setGiftVisible] = useState<boolean>()
   const [erro, setErro] = useState<boolean>(false)
   const [textErro, setTextErro] = useState<string>('')
+  const [video, setVideo] = useState<boolean>(false)
   useEffect(() => {
     setOptions(Questions[questionPage].options)
     setQuestion(Questions[questionPage].question)
     setAnswer(Questions[questionPage].answer)
     setGiftImg(Questions[questionPage].gift)
     setGiftText(Questions[questionPage].giftText)
+    if (Questions[questionPage].video) {
+      setVideo(true)
+    }
   }, [questionPage])
   function resetQuestionPage () {
     setQuestionPage((prev: number) => prev + 1)
@@ -79,11 +83,12 @@ function RenderQuestions() {
 
       {giftVisible && <div>
         <p className='p-gift'>{giftText}</p>
-        <Image
+        {!(video) && <Image
           src={giftImg}
           className='img-gift'
           preview={false}
-        />
+        />}
+        {video && {giftImg}}
         <RightOutlined style={{color: '#fff', width: 30 }} onClick={() => {
               resetQuestionPage()
               setGiftVisible(false)
