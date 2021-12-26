@@ -3,6 +3,7 @@ import { Alert, Button, Form, Image, Radio, Space } from 'antd'
 import { RightOutlined } from '@ant-design/icons'
 import Questions,{ IQuestion }from '../Questions/Questions'
 import './RenderQuestions.css'
+import Video from '../Video/Video'
 
 function RenderQuestions() {
   const [answer, setAnswer] = useState<string>()
@@ -88,7 +89,7 @@ function RenderQuestions() {
           className='img-gift'
           preview={false}
         />}
-        {video && {giftImg}}
+        {video && <Video url={giftImg} />}
         <RightOutlined style={{color: '#fff', width: 30 }} onClick={() => {
               resetQuestionPage()
               setGiftVisible(false)
