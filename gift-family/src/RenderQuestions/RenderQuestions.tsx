@@ -10,6 +10,8 @@ function RenderQuestions() {
   const [options, setOptions] = useState<string[]>()
   const [correct, setCorrect] = useState<boolean>()
   const [questionPage, setQuestionPage] = useState<number>(0)
+  const [giftImg, setGiftImg] = useState<string>('')
+  const [giftText, setGiftText] = useState<any>()
   const [form] = Form.useForm()
   const [answersCorrect, setanswersCorrect] = useState<number>(0)
   const [giftVisible, setGiftVisible] = useState<boolean>()
@@ -19,6 +21,8 @@ function RenderQuestions() {
     setOptions(Questions[questionPage].options)
     setQuestion(Questions[questionPage].question)
     setAnswer(Questions[questionPage].answer)
+    setGiftImg(Questions[questionPage].gift)
+    setGiftText(Questions[questionPage].giftText)
   }, [questionPage])
   function resetQuestionPage () {
     setQuestionPage((prev: number) => prev + 1)
@@ -29,11 +33,11 @@ function RenderQuestions() {
   function testing (e: IQuestion) {
     if (e.answer) {
       if (e.answer === answer) {
-        console.log('Sua resposta esta correta')
         setanswersCorrect((prev: number) => prev + 1)
         setCorrect(true)
       } else {
-        console.log('Sua resposta esta errada')
+        setErro(true)
+        setTextErro('Erou tapada')
       }
     } else {
       setErro(true)
@@ -74,18 +78,24 @@ function RenderQuestions() {
       </Form>}
 
       {giftVisible && <div>
+        <p className='p-gift'>{giftText}</p>
         <Image
-          width={200}
-          src="./imgs/gift1.jpg"
+          src={giftImg}
+          className='img-gift'
+          preview={false}
         />
+        <RightOutlined style={{color: '#fff', width: 30 }} onClick={() => {
+              resetQuestionPage()
+              setGiftVisible(false)
+            }}/>
       </div>}
-      {correct &&
+      {(correct && !(giftVisible)) &&
       <>
         <h1 style={{color: '#fff'}}>Resposta Certa !</h1>
         <Space direction='horizontal'>
         <RightOutlined style={{color: '#fff', width: 30 }} onClick={() => {
-              resetQuestionPage()
               setGiftVisible(true)
+              setErro(false)
             }}/>
         </Space>
       </>

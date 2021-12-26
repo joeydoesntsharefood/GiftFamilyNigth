@@ -33,3 +33,10 @@
   color: #fff;
   border: 2px solid rgba(252, 127, 127, 0.74);
 }
+.img-gift {
+  width: 50%;
+}
+.p-gift {
+  color: #fff;
+  font-size: 20px;
+}
