@@ -1,5 +1,5 @@
 .div-playground {
-  background-color: red;
+  background-color: #5768FF;
   max-width: 600px;
   width: 100%;
   margin-left: auto;
@@ -7,6 +7,26 @@
   margin-top: 20%;
   text-align: center;
   padding: 20px;
-  border: 2px solid blue;
+  border: 7px solid #7F258E;
+  border-radius: 40px;
+  box-shadow: 10px -10px #7e258e67;
+}
+.full-size-display {
+  width: 100%;
+}
+.button-lets-play {
+  margin: 20px;
+  width: 400px;
+  height: 50px;
+  font-size: 20px;
+  border: 2px solid transparent;
   border-radius: 20px;
+}
+.button-lets-play:hover {
+  border: 2px solid #000;
+  background-color: #000;
+  color: #fff;
+}
+.h1-lets-play {
+  color: #fff;
 }

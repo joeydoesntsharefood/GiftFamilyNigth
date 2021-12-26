@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { Button, Form, Radio, Space } from 'antd'
+import { Alert, Button, Form, Image, Radio, Space } from 'antd'
 import { RightOutlined } from '@ant-design/icons'
 import Questions,{ IQuestion }from '../Questions/Questions'
 import './RenderQuestions.css'
@@ -12,6 +12,9 @@ function RenderQuestions() {
   const [questionPage, setQuestionPage] = useState<number>(0)
   const [form] = Form.useForm()
   const [answersCorrect, setanswersCorrect] = useState<number>(0)
+  const [giftVisible, setGiftVisible] = useState<boolean>()
+  const [erro, setErro] = useState<boolean>(false)
+  const [textErro, setTextErro] = useState<string>('')
   useEffect(() => {
     setOptions(Questions[questionPage].options)
     setQuestion(Questions[questionPage].question)
@@ -21,6 +24,7 @@ function RenderQuestions() {
     setQuestionPage((prev: number) => prev + 1)
     setCorrect(false)
     form.resetFields()
+    setErro(false)
   }
   function testing (e: IQuestion) {
     if (e.answer) {
@@ -32,31 +36,30 @@ function RenderQuestions() {
         console.log('Sua resposta esta errada')
       }
     } else {
-      console.log('Escolha uma alternativa')
+      setErro(true)
+      setTextErro('Escolhe uma opção tapada')
     }
   }
+
   return (
     <div>
-      <p className='p-count'>{answersCorrect} / {Questions.length}</p>
-      <Form
+      {erro && <Alert message={textErro} type="error" className='erro-alert'/>}
+      {!(giftVisible) && <p className='p-count'>{answersCorrect} / {Questions.length}</p>}
+      {!(giftVisible) && <Form
         form={form}
         onFinish={e => testing(e)}
       >
         <Form.Item
-          label={<h1>{question}</h1>}
+          label={<h1 className='h1-question'>{question}</h1>}
           name='answer'
         >
           <Radio.Group
             buttonStyle='solid'
             optionType='button'
-            options={
-              options && options.map((item: string) => ({
-                label: item,
-                value: item,
-                className: 'options'
-              }))
-            }
           >
+            {options && options.map((item: string) =>
+              <Radio value={item} className='options'>{item}</Radio>
+            )}
           </Radio.Group>
         </Form.Item>
         <Form.Item>
@@ -68,8 +71,25 @@ function RenderQuestions() {
             Confirmar Resposta
           </Button>
         </Form.Item>
-      </Form>
-      {correct && <RightOutlined onClick={() => resetQuestionPage()}/>}
+      </Form>}
+
+      {giftVisible && <div>
+        <Image
+          width={200}
+          src="./imgs/gift1.jpg"
+        />
+      </div>}
+      {correct &&
+      <>
+        <h1 style={{color: '#fff'}}>Resposta Certa !</h1>
+        <Space direction='horizontal'>
+        <RightOutlined style={{color: '#fff', width: 30 }} onClick={() => {
+              resetQuestionPage()
+              setGiftVisible(true)
+            }}/>
+        </Space>
+      </>
+      }
     </div>
   )
 }

@@ -1,11 +1,35 @@
 .p-count {
   font-size: large;
+  color: #fff;
+}
+.h1-question {
+  color: #fff;
 }
 .options {
-  background: blue;
   padding: 10px;
   margin: auto;
+  font-size: 20px;
+  color: #fff;
 }
 .button-request {
   margin: 20px;
+  width: 400px;
+  height: 50px;
+  font-size: 20px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+}
+.button-request:hover {
+  border: 2px solid #000;
+  background-color: #000;
+  color: #fff;
+}
+.erro-alert {
+  background-color: red;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 20px;
+  font-style: bolder;
+  color: #fff;
+  border: 2px solid rgba(252, 127, 127, 0.74);
 }
