@@ -2,7 +2,7 @@ import React from 'react'
 
 function Video (props: any) {
   return (
-    <video autoPlay={true} muted={true}>
+    <video autoPlay={true} muted={props.mute}>
       <source src={props.url} />
     </video>
   )

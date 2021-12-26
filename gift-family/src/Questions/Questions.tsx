@@ -7,6 +7,7 @@ export interface IQuestion {
   gift: any
   giftText: string
   video?: boolean
+  videoMute?: boolean
 }
 function urlGit (value: string) {
   return `https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/cad112a38d02d1b445585fa95be58ccd7dd04543/gift-family/src/RenderQuestions/imgs/${value}?raw=true`
@@ -56,8 +57,10 @@ const Questions: IQuestion[] = [
     options: ['1 ano após a minha chegada', '17/Outubro', '14/Agosto', '14/Setembro', '3/Julho'],
     egg: 'Você sabe que é verdade',
     eggOption: '1 ano após a minha chegada',
-    gift: urlGit('gift1.jpg'),
+    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/a6363ec55369353d89b31dcfac6ff7fe28de4723/gift-family/src/RenderQuestions/imgs/gift13.mp4?raw=true',
+    video: true,
     giftText: 'Mais de um ano de merda',
+    videoMute: false
   },
   // Okay
   {
@@ -66,7 +69,8 @@ const Questions: IQuestion[] = [
     options: ['Rafael', 'Lucase', 'Lorrany', 'Lokix', 'Skinifer'],
     gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/cad112a38d02d1b445585fa95be58ccd7dd04543/gift-family/src/RenderQuestions/imgs/gift5.mp4?raw=true',
     giftText: 'Sério Lorrany, você consegue superar qualquer coisa que fazemos, parabéns !',
-    video: true
+    video: true,
+    videoMute: true
   },
   // Okay
   {

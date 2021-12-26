@@ -19,6 +19,7 @@ function RenderQuestions() {
   const [erro, setErro] = useState<boolean>(false)
   const [textErro, setTextErro] = useState<string>('')
   const [video, setVideo] = useState<boolean>(false)
+  const [videoMute, setVideoMute] = useState<boolean>(false)
   useEffect(() => {
     setOptions(Questions[questionPage].options)
     setQuestion(Questions[questionPage].question)
@@ -27,6 +28,9 @@ function RenderQuestions() {
     setGiftText(Questions[questionPage].giftText)
     if (Questions[questionPage].video) {
       setVideo(true)
+      if (Questions[questionPage].videoMute) {
+        setVideoMute(true)
+      }
     }
   }, [questionPage])
   function resetQuestionPage () {
@@ -89,7 +93,7 @@ function RenderQuestions() {
           className='img-gift'
           preview={false}
         />}
-        {video && <Video url={giftImg} />}
+        {video && <Video url={giftImg} mute={videoMute}/>}
         <RightOutlined style={{color: '#fff', width: 30 }} onClick={() => {
               resetQuestionPage()
               setGiftVisible(false)
