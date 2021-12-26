@@ -49,6 +49,7 @@ const Questions: IQuestion[] = [
     gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/main/gift-family/src/RenderQuestions/imgs/gift8.jpg?raw=true',
     giftText: 'Hmmmmmmmmmmm LEOZINNNNNNNNN'
   },
+  //
   {
     question: 'Qual o aniversário da live ?',
     answer: '14/Setembro',
@@ -56,7 +57,7 @@ const Questions: IQuestion[] = [
     egg: 'Você sabe que é verdade',
     eggOption: '1 ano após a minha chegada',
     gift: urlGit('gift1.jpg'),
-    giftText: 'Test5',
+    giftText: 'Mais de um ano de merda',
   },
   // Okay
   {
@@ -80,9 +81,10 @@ const Questions: IQuestion[] = [
     question: 'Qual o tatuador mais gostoso do Studio De Nunes ?',
     answer: 'Wil',
     options: ['Wil', 'GuiGui', 'Frogzin', 'Wilgner', 'O Rapaz sem camisa'],
-    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/1dbc72df0e6d24d5cefae387876623430e0dcd06/gift-family/src/RenderQuestions/imgs/gift9.jpg?raw=true',
+    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/f10cb89a99bc7efa215302fd185ac4dd86b051c1/gift-family/src/RenderQuestions/imgs/gift11.jpg?raw=true',
     giftText: '@frog.wil'
   },
+  // Okay
   {
     question: 'Qual o Emote mais usado na live até o momento ?',
     answer: 'lul',
@@ -90,6 +92,7 @@ const Questions: IQuestion[] = [
     gift: 'https://cdn.vox-cdn.com/thumbor/tYW7_2OBEsfJ3BKsdq_fCLYG5Vk=/0x0:722x800/1200x0/filters:focal(0x0:722x800):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/10838093/LUL.jpg',
     giftText: 'Pq Rafa/Teteu gostam tanto disso ?'
   },
+  // Okay
   {
     question: 'Qual o jogo proibido ?',
     answer: 'Roblox',
@@ -111,8 +114,9 @@ const Questions: IQuestion[] = [
     answer: 'Bigode',
     options: ['Bong', 'Maconha sem fim', 'Bigode', 'Yayah', 'Biel'],
     gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/cad112a38d02d1b445585fa95be58ccd7dd04543/gift-family/src/RenderQuestions/imgs/gift4.jpg?raw=true',
-    giftText: 'Test12'
+    giftText: 'O Bigodin brabo'
   },
+  // Okay
   {
     question: 'Para comemorar a pergunta de número 13, responda corretamente',
     answer: 'Lula 2022',
@@ -120,21 +124,23 @@ const Questions: IQuestion[] = [
     gift: 'https://static.poder360.com.br/2021/03/Ev-0UmOXMA0R7XU.jpeg',
     giftText: 'O Pai fodace'
   },
+  // Okay
   {
     question: 'Meu bem ?',
     answer: 'Luiza',
     options: ['Leozin', 'Luiza', 'Fuher', 'Mat(h)eus', 'Hector'],
     egg: 'Quem é Hector, Lorrany ?',
     eggOption: 'Hector',
-    gift: urlGit('gift1.jpg'),
-    giftText: 'Test14'
+    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/f10cb89a99bc7efa215302fd185ac4dd86b051c1/gift-family/src/RenderQuestions/imgs/gift10.png?raw=true',
+    giftText: 'Luizaaaaaaaaaaaaaaaaaaaaaa'
   },
+  // Okay
   {
     question: 'Fala a maneira mais propria e correta de dizer um bom "Te amo"',
     answer: 'Vai tomar no seu cu',
     options: ['Vai tomar no seu cu', 'Te amo', 'Amo Tu', 'Ownnnnt', 'Amo você'],
-    gift: urlGit('gift1.jpg'),
-    giftText: 'Test15'
+    gift: 'https://s3.memeshappen.com/memes/i-hate-you--meme-10008.jpg',
+    giftText: 'N é meme'
   }
 ]
 
