@@ -36,9 +36,7 @@ const Questions: IQuestion[] = [
   {
     question: 'Qual o gaucho mais bonito da live ?',
     answer: 'Lucas',
-    options: ['Leozin', 'Diniz', 'Teteu', 'Lucas', 'Lokix'],
-    egg: 'Não sou gaucho, mas obrigado pelo elogio',
-    eggOption: 'Lokix',
+    options: ['Leozin', 'Diniz', 'Teteu', 'Lucas', 'Lokix, Não sou gaucho, mas obrigado pelo elogio'],
     gift: 'https://raw.githubusercontent.com/joeydoesntsharefood/GiftFamilyNigth/a91be774027aa3990b496bd1b529cacb2bad2965/gift-family/src/RenderQuestions/imgs/gift6.jpg?raw=true',
     giftText: 'Acredita que ele tem uma amiga gata e não me apresentou ?'
   },
@@ -55,12 +53,8 @@ const Questions: IQuestion[] = [
     question: 'Qual o aniversário da live ?',
     answer: '14/Setembro',
     options: ['1 ano após a minha chegada', '17/Outubro', '14/Agosto', '14/Setembro', '3/Julho'],
-    egg: 'Você sabe que é verdade',
-    eggOption: '1 ano após a minha chegada',
     gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/31ce4495a9f6c72456f9537a7cdd99fd8136af5e/gift-family/src/RenderQuestions/imgs/gift12.jpg?raw=true',
-    video: true,
     giftText: 'Mais de um ano de merda',
-    videoMute: true
   },
   // Okay
   {
@@ -132,9 +126,7 @@ const Questions: IQuestion[] = [
   {
     question: 'Meu bem ?',
     answer: 'Luiza',
-    options: ['Leozin', 'Luiza', 'Fuher', 'Mat(h)eus', 'Hector'],
-    egg: 'Quem é Hector, Lorrany ?',
-    eggOption: 'Hector',
+    options: ['Leozin', 'Luiza', 'Fuher', 'Mat(h)eus', 'Hector, Quem é Hector, Lorrany ?'],
     gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/f10cb89a99bc7efa215302fd185ac4dd86b051c1/gift-family/src/RenderQuestions/imgs/gift10.png?raw=true',
     giftText: 'Luizaaaaaaaaaaaaaaaaaaaaaa'
   },

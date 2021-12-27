@@ -22,6 +22,8 @@ function RenderQuestions() {
   const [video, setVideo] = useState<boolean>(false)
   const [videoMute, setVideoMute] = useState<boolean>(false)
   const [final, setFinal] = useState<number>(0)
+  const [egg, setEgg] = useState<any>()
+  const [eggOption, setEggOption] = useState<any>()
   useEffect(() => {
     setOptions(Questions[questionPage].options)
     setQuestion(Questions[questionPage].question)
@@ -35,6 +37,10 @@ function RenderQuestions() {
         setVideoMute(true)
       }
     }
+    if (Questions[questionPage].egg) {
+      setEgg(Questions[questionPage].egg)
+      setEggOption(Questions[questionPage].eggOption)
+    }
   }, [questionPage])
   function resetQuestionPage () {
     setQuestionPage((prev: number) => prev + 1)
@@ -43,6 +49,8 @@ function RenderQuestions() {
     setErro(false)
     setVideo(false)
     setVideoMute(false)
+    setEgg('')
+    setEggOption('')
   }
   function testing (e: IQuestion) {
     if (e.answer) {

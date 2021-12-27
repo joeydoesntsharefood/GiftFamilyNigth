@@ -10,7 +10,7 @@ function Final (props: any) {
   return (
     <>
       {render && <>
-        <h1 style={{color: '#fff'}}>Bem vindo 2022</h1>
+        <h1 style={{color: '#fff'}}>Bem vindo 2022 adiantado pq tenho ansiedade Fodace</h1>
         <p style={{textAlign: 'justify', fontSize: 20, color: '#fff'}}>
           Olá Lorrany, sou eu do passado, dizendo e escrevendo enquanto vejo uma live aleatória da Bagi
           e penso o namorado dela é insuportavel, porém isso não é sobre o namorado insuportavel da Bagi.
