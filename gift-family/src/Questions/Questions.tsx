@@ -57,7 +57,7 @@ const Questions: IQuestion[] = [
     options: ['1 ano após a minha chegada', '17/Outubro', '14/Agosto', '14/Setembro', '3/Julho'],
     egg: 'Você sabe que é verdade',
     eggOption: '1 ano após a minha chegada',
-    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/a6363ec55369353d89b31dcfac6ff7fe28de4723/gift-family/src/RenderQuestions/imgs/gift13.mp4?raw=true',
+    gift: 'https://github.com/joeydoesntsharefood/GiftFamilyNigth/blob/31ce4495a9f6c72456f9537a7cdd99fd8136af5e/gift-family/src/RenderQuestions/imgs/gift12.jpg?raw=true',
     video: true,
     giftText: 'Mais de um ano de merda',
     videoMute: true
